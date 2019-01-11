@@ -1,7 +1,7 @@
 {
   "name": "deCONZ",
-  "version": "2.05.22",
-  "slug": "deconz",
+  "version": "latest-beta",
+  "slug": "deconz-legacy",
   "description": "deCONZ",
   "startup": "services",
   "boot": "auto",
@@ -17,7 +17,12 @@
     "httpport": 8234,
     "wsport": 8235,
     "conbee": true,
-    "xpra": false
+      "xpra": false,
+      "debug_info?": 1,
+      "debug_aps?": 0,
+      "debug_zcl?": 0,
+      "debug_zdp?": 0,
+      "debug_otau?": 0
   },
   "schema": {
     "httpport": "port",

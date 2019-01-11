@@ -1,22 +1,15 @@
-# deCONZ Addon for Hass.io - DEPRECATED
+# Max's Addons for Hass.io - EXPERIMENTAL
 
-This plugin is not updated anymore. Please use [this plugin](https://github.com/marthoc/hassio-addons) instead.
+Add https://github.com/maxandersen/hassio-addons as a repository URL. 
 
-Add https://github.com/neffs/hassio-addons as a repository URL. 
+This repo contains hass.io addons I've had the need or interest in creating/patching.
 
-## Options
+deconz
+======
 
-The conbee flag is needed if you use a conbee adapter. It adds fake udev entries, so that deCONZ recognises the adapter. I would appreciate feedback if it doesn’t work. 
+Based on https://github.com/neffs/hassio-addons which for some reason just works for me
+as opposed to https://github.com/marthoc/hassio-addons.
 
-The xpra flag starts the full GUI and allows to access it with [Xpra](http://xpra.org).  
-`xpra attach tcp/hassio.local:8236`
+Currently just provide latest-beta and with a few fixes to work with newer version of deconz.
 
-
-wsport is the websocket port
-
-httpport is the main http port. The link to the web ui follows the port mapping of port 8234.
-
-
-## Caveats
-
-This addon uses the host network because otherwise the websocket port is not easily changeable. This might change in the future. The port mappings are displayed just for reference. 
+Only use if you are okey using latest-greatest.

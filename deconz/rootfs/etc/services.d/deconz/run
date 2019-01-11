@@ -22,14 +22,34 @@ fi
 # Connect to zigbee adapter
 options+=(--auto-connect=1)
 
+if hass.config.has_value 'debug_info'; then
+   options+=(--dbg-info=$(hass.config.get 'debug_info'))
+else
 options+=(--dbg-info=1)
+fi
+
+if hass.config.has_value 'debug_aps'; then
+   options+=(--dbg-aps=$(hass.config.get 'debug_aps'))
+fi
+
+if hass.config.has_value 'debug_zcl'; then
+   options+=(--dbg-zcl=$(hass.config.get 'debug_zcl'))
+fi
+
+if hass.config.has_value 'debug_zdp'; then
+   options+=(--dbg-zdp=$(hass.config.get 'debug_zdp'))
+fi
+
+if hass.config.has_value 'debug_otau'; then
+   options+=(--dbg-otau=$(hass.config.get 'debug_otau'))
+fi
 
 # Bind to a specific interface
 if hass.config.has_value 'httpport'; then
-    options+=("--http-port=$(hass.config.get 'httpport')")
+    options+=("--http-port=$(hass.config.get 'httpport'))
 fi
 if hass.config.has_value 'wsport'; then
-    options+=("--ws-port=$(hass.config.get 'wsport')")
+    options+=("--ws-port=$(hass.config.get 'wsport'))
 fi
 
 # Run deCONZ
