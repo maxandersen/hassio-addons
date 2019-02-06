@@ -1,7 +1,7 @@
 {
   "name": "deCONZ",
   "version": "latest-beta",
-  "slug": "deconz-legacy",
+  "slug": "deconz-latest",
   "description": "deCONZ",
   "startup": "services",
   "boot": "auto",
